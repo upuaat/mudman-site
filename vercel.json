@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    { "source": "http://:path*", "destination": "https://:path*", "permanent": true },
+    { "source": "/www/:path*", "destination": "https://your-domain.com/:path*", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ]
+}
